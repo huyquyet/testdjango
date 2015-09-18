@@ -1,0 +1,16 @@
+<span class="text_like_image">
+                {% if user not in images.user_like_pic.all %}
+                {{ user.id}}
+                <form action="{% url 'app1:like_image' images.pk %}" method="post" id="like-image{{images.id}}">
+                    {% csrf_token %}
+                </form>
+                <a href="#" onclick="document.getElementById('like-image{{images.id}}').submit()">Like</a>
+                {% else %}
+                {{ user.id}}
+                 <form action="{% url 'app1:unlike_image' images.pk %}" method="post" id="unlike-image{{images.id}}">
+                     {% csrf_token %}
+                 </form>
+                <a href="#" onclick="document.getElementById('unlike-image{{images.id}}').submit()">Unlike</a>
+                {% endif %}
+                <a href="#comment_image">Comment</a>
+            </span>

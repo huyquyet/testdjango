@@ -1,0 +1,11 @@
+{% extends 'base_app1.html' %}
+{% block header %}ghi de header login_fail{% endblock %}
+{% block content %}
+{% if error %} {{ error }} {% endif %}
+<br>
+
+Moi dang nhap lai
+{% include 'user/dangnhap.html' %}
+<br>
+hoac <a href="{% url 'app1:register' %}"> dang ky thanh vien</a>
+{% endblock %}

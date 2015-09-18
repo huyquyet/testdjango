@@ -1,0 +1,66 @@
+body {
+    width: 960px;
+    height: auto;
+    margin: 0 auto;
+#    background-color: blue;
+}
+header {
+    height:60px;
+    background : red;
+}
+nav {
+    width:960px;
+    height : 30px;
+    background : red;
+}
+nav ul  {
+        list-style:none;
+    }
+
+    nav ul li   {
+        #display:block;
+        float:left;
+        padding:0 20px;
+        #   position:relative;
+        #z-index:12;
+        top:10px;
+        #color:#d1d0d0;
+    }
+
+    nav ul li a {
+        font-family: 'Open Sans', sans-serif;
+        text-transform: uppercase;
+        font-size:15px;
+        font-weight:500;
+        text-decoration:none;
+
+    }
+a {
+text-decoration:none;
+}
+.menu-left {
+    float : left;
+}
+
+section {
+    position:static;
+}
+article{
+    position :static;
+}
+
+.view_image{
+    width: 960px;
+    height:auto;
+}
+
+.view_image img{
+    width:800px;
+    height:600px;
+    margin : 5px 0 0 80px;
+}
+.like_image{
+}
+.like_image .text_like_image a {
+color: red;
+}

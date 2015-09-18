@@ -1,0 +1,13 @@
+{% extends 'base_app1.html' %}
+
+{% block content %}
+<div><a href="{% url 'app1:upload_images' %}">upload images</a></div>
+{% for listalbum in list_album  %}
+<div class="view_list_album" style="width : 230px; height:200px; margin: 5px; float:left; background-color: cyan;position :inherit ; ">
+
+        <a href="{% url 'app1:detail_album' listalbum.id %}"> {{ listalbum.id}} __ {{ listalbum.name_album}}</a>
+
+</div>
+
+{% endfor %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base_app1.html' %}
+
+{% block content %}
+<div>{{ album.name_album}}</div>
+
+{% for image in list_images %}
+<div style="float:left; margin-left:15px;">
+    <p>
+        <a href="{% url 'app1:detail_image' image.id %}" ><img height="300px" width="300px" src="{{ image.pic.url }}"/></a>
+    </p>
+</div>
+{% endfor %}
+
+<!--<img src="../../images/abc.jpg" style="width:200px; height:200px">-->
+
+{% endblock %}
